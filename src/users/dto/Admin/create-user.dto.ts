@@ -23,4 +23,6 @@ export class createUserDto {
   password: string;
   @IsString({ message: 'image must be string' })
   image: string;
+  @IsString({ message: 'role must be string' })
+  role: string;
 }

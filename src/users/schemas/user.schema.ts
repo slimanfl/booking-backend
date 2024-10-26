@@ -7,4 +7,5 @@ export const UserSchema = new mongoose.Schema({
   phone: String,
   password: String,
   image: String,
+  role : String
 });
