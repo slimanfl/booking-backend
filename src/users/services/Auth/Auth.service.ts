@@ -28,7 +28,7 @@ export class AuthService {
         email: user.email,
         role: user.role,
       },
-      { secret: process.env.JWT_SECRET },
+      { secret: 'njdhjbnkmjbnjbhvgvjkbkbhvchjkbjvhgcgklbkjvhgc' },
     );
     return { data: user, token };
   }
