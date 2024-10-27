@@ -21,6 +21,12 @@ export class AuthService {
     //   ...body,
     //   password,
     // };
+    const email = body.email;
+    const temp = await this.userModel.findOne({ email });
+    if (temp)
+      throw new Error(
+        'Email found please enter other email and try again !!! ',
+      );
     const user = await this.userModel.create(body);
     if (!user) throw new Error('error with create user !!!');
     const token = await this.jwtService.sign(
