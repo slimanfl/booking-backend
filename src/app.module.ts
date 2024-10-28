@@ -5,8 +5,15 @@ import { DatabaseModule } from './database/database.module';
 import { UsersModule } from './users/users.module';
 import { ConfigModule } from '@nestjs/config';
 import { EventsModule } from './events/events.module';
+import { NotificationsModule } from './notifications/notifications.module';
 @Module({
-  imports: [ConfigModule, DatabaseModule, UsersModule, EventsModule],
+  imports: [
+    ConfigModule,
+    DatabaseModule,
+    UsersModule,
+    EventsModule,
+    NotificationsModule,
+  ],
   controllers: [AppController],
   providers: [AppService],
 })

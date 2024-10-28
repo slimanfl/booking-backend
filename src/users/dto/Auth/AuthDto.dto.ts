@@ -6,10 +6,8 @@ import {
   MinLength,
 } from 'class-validator';
 
-
 export class signInDto {
   @IsEmail({}, { message: 'must be email' })
-  
   email: string;
   @IsString({ message: 'password must be string' })
   @MinLength(8, { message: 'password must be more than 8 charcter' })
