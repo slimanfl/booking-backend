@@ -1,0 +1,58 @@
+"use strict";
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.signUpDto = exports.signInDto = void 0;
+const class_validator_1 = require("class-validator");
+class signInDto {
+}
+exports.signInDto = signInDto;
+__decorate([
+    (0, class_validator_1.IsEmail)({}, { message: 'must be email' }),
+    __metadata("design:type", String)
+], signInDto.prototype, "email", void 0);
+__decorate([
+    (0, class_validator_1.IsString)({ message: 'password must be string' }),
+    (0, class_validator_1.MinLength)(8, { message: 'password must be more than 8 charcter' }),
+    (0, class_validator_1.MaxLength)(20, { message: 'password must be less than 20 charcter' }),
+    __metadata("design:type", String)
+], signInDto.prototype, "password", void 0);
+class signUpDto {
+}
+exports.signUpDto = signUpDto;
+__decorate([
+    (0, class_validator_1.IsString)({ message: 'name must be string' }),
+    __metadata("design:type", String)
+], signUpDto.prototype, "name", void 0);
+__decorate([
+    (0, class_validator_1.IsString)({ message: 'email must be string' }),
+    (0, class_validator_1.IsEmail)({}, { message: 'email is not valid!!' }),
+    __metadata("design:type", String)
+], signUpDto.prototype, "email", void 0);
+__decorate([
+    (0, class_validator_1.IsString)({ message: 'phone must be string' }),
+    (0, class_validator_1.IsPhoneNumber)('SY', { message: 'phone is valid' }),
+    __metadata("design:type", String)
+], signUpDto.prototype, "phone", void 0);
+__decorate([
+    (0, class_validator_1.IsString)({ message: 'password must be string' }),
+    (0, class_validator_1.MinLength)(8, { message: 'password must have more than 8 charcter' }),
+    (0, class_validator_1.MaxLength)(20, { message: 'password must have les than 20 charcter' }),
+    __metadata("design:type", String)
+], signUpDto.prototype, "password", void 0);
+__decorate([
+    (0, class_validator_1.IsString)({ message: 'image must be string' }),
+    __metadata("design:type", String)
+], signUpDto.prototype, "image", void 0);
+__decorate([
+    (0, class_validator_1.IsString)({ message: 'role must be string' }),
+    __metadata("design:type", String)
+], signUpDto.prototype, "role", void 0);
+//# sourceMappingURL=AuthDto.dto.js.map
