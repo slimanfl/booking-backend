@@ -1,1 +1,0 @@
-{"version":3,"file":"notification.schema.js","sourceRoot":"","sources":["../../../src/notifications/schemas/notification.schema.ts"],"names":[],"mappings":";;;AAAA,qCAAqC;AAExB,QAAA,kBAAkB,GAAG,IAAI,QAAQ,CAAC,MAAM,CAAC;IACpD,KAAK,EAAE,MAAM;IAEb,OAAO,EAAE,MAAM;IAEf,IAAI,EAAE,OAAO;IAEb,SAAS,EAAE,IAAI;CAChB,CAAC,CAAC"}
